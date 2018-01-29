@@ -1025,7 +1025,8 @@ const int FrontViewPositionNone = 0xff;
         *pRevealWidth = _rightViewRevealWidth;
         *pRevealOverdraw = _rightViewRevealOverdraw;
     } else {
-        (void)(*pRevealWidth = _rearViewRevealWidth), *pRevealOverdraw = _rearViewRevealOverdraw;
+        *pRevealWidth = _rearViewRevealWidth;
+        *pRevealOverdraw = _rearViewRevealOverdraw;
     }
     
     if (*pRevealWidth < 0) *pRevealWidth = _contentView.bounds.size.width + *pRevealWidth;
